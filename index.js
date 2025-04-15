@@ -67,7 +67,7 @@ function handleTweetBtnClick(){
     if(tweetInput.value){
         tweetsData.unshift({
             handle: `@Scrimba`,
-            profilePic: `images/scrimbalogo.png`,
+            profilePic: `/scrimbalogo.png`,
             likes: 0,
             retweets: 0,
             tweetText: tweetInput.value,
@@ -90,7 +90,7 @@ function handleReplyBtnClick(tweetId){
         const targetTweetObj = tweetsData.find(tweet => tweet.uuid === tweetId)
         targetTweetObj.replies.push({
             handle: "@You",
-            profilePic: "images/scrimbalogo.png",
+            profilePic: "/scrimbalogo.png",
             tweetText: replyText
         })
         replyInput.value = ''
@@ -142,7 +142,7 @@ function getFeedHtml(){
                 repliesHtml+=`
 <div class="tweet-reply">
     <div class="tweet-inner">
-        <img src="${reply.profilePic}" class="profile-pic">
+        <img src="/chucknorris.jpeg" class="profile-pic">
             <div>
                 <p class="handle">${reply.handle}</p>
                 <p class="tweet-text">${reply.tweetText}</p>
@@ -157,7 +157,7 @@ function getFeedHtml(){
         feedHtml += `
 <div class="tweet">
     <div class="tweet-inner">
-        <img src="${tweet.profilePic}" class="profile-pic">
+        <img src="/musk.png" class="profile-pic">
         <div>
             <p class="handle">${tweet.handle}</p>
             <p class="tweet-text">${tweet.tweetText}</p>
